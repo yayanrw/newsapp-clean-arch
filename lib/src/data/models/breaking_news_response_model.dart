@@ -13,6 +13,7 @@ class BreakingNewsResponseModel {
       totalResults: json['totalResults'] as int,
       articles: List<ArticleModel>.from(
         (json['articles'] as List<dynamic>).map(
+          // ignore: always_specify_types
           (e) => ArticleModel.fromJson(e as Map<String, dynamic>),
         ),
       ),
